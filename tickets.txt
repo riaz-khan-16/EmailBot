@@ -1,0 +1,6 @@
+Ticket 5: Push this code to github
+Ticket 4: Use OOP to organize the code 
+Ticket 3: Write a code which can send same email to 10 different users [Completed]
+Ticket 2: Make a Thinkter app using it [completed]
+Ticket 1: Design the email [Completed]
+Ticket 0: Make a draft [Completed]
