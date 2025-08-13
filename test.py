@@ -1,8 +1,3 @@
-import os
+from UserProfile.User import profile
 
-file_path = "Storage/main.xlsx"
-
-if os.path.isfile(file_path):
-    print("File exists!")
-else:
-    print("File does not exist.")
+print(profile)

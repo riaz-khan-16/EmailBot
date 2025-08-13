@@ -1,5 +1,8 @@
 
-Ticket 7: Make a method which can store email using store email button
+Ticket 10: Create User Profile 
+Ticket 9: Improve the email template.
+Ticket 8: Make a method by which an email can be writen from taking input [Professor Name, email, research Interests] from the user. [Complete]
+Ticket 7: Make a method which can store email using store email button [Completed]
 Ticket 6: create a destop app which can take email, name and research Interests [completed]
 Ticket 5: Push this code to github [Completed]
 Ticket 4: Use OOP to organize the code [completed]

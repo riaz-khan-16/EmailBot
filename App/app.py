@@ -2,6 +2,8 @@ import tkinter as tk
 from Storage.addNew import addNewData
 from Storage.createFile import CrateExcel
 import os
+from EmailTemplates.Default import defaultEmail
+from Components.EmailSender import EmailSender
 
 class ProfessorForm:
     def __init__(self):
@@ -69,9 +71,21 @@ class ProfessorForm:
 
     def sendEmail(self):
         # Show success message
-
         
-        self.success_label.config(text="Email Sent successfully!", fg="green")
+
+        name = self.professor_name.get()
+        professor_email_id = self.professor_email_id.get()
+        research = self.research_interests.get("1.0", tk.END).strip()
+        website = self.website.get()
+
+        email_body=defaultEmail(name, research).writeEmail()
+
+
+        email=EmailSender('riaz222666@gmail.com', professor_email_id, "Prospective Graduate Student", email_body)
+        email.sendEmail()
+
+
+        self.success_label.config(text="Email Sent to " +name +" successfully!", fg="green")
 
 
     def run(self):
