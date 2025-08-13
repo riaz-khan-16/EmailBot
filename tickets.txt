@@ -1,5 +1,8 @@
-Ticket 5: Push this code to github
-Ticket 4: Use OOP to organize the code 
+
+Ticket 7: Make a method which can store email using store email button
+Ticket 6: create a destop app which can take email, name and research Interests [completed]
+Ticket 5: Push this code to github [Completed]
+Ticket 4: Use OOP to organize the code [completed]
 Ticket 3: Write a code which can send same email to 10 different users [Completed]
 Ticket 2: Make a Thinkter app using it [completed]
 Ticket 1: Design the email [Completed]

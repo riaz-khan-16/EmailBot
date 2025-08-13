@@ -1,0 +1,5 @@
+The goal of this project is to make an application which can send email by using code.
+
+Steps:
+1. user will write email in a prompt or text file
+2. This bot will send this email to the reciever using gmail.
