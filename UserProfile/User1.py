@@ -1,0 +1,1 @@
+data = {'name': 'Riaz', 'email': 'no', 'target_semester': 'sm', 'major': 'dmee', 'university': 'emem', 'graduation_year': 'emeem'}

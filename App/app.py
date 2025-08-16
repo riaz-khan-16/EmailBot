@@ -10,7 +10,10 @@ class ProfessorForm:
         self.root = tk.Tk()
         self.root.title("Professor Details Form")
         self.root.geometry("500x500")
-
+        
+        
+        
+        #create main page
         # Name input
         tk.Label(self.root, text="Professor Name:").pack()
         self.professor_name = tk.Entry(self.root, width=50, font=("Arial", 12))
@@ -42,6 +45,10 @@ class ProfessorForm:
         # Success message label (initially empty)
         self.success_label = tk.Label(self.root, text="", font=("Arial", 12))
         self.success_label.pack(pady=5)
+
+
+
+    
 
     def storeData(self):
         name = self.professor_name.get()

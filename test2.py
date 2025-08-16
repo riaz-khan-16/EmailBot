@@ -1,2 +1,5 @@
-x=['riaz', 'Galib']
-print(', '.join(x))
+
+
+from UserProfile.User import profile
+
+print(profile)

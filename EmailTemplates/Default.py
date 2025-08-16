@@ -3,13 +3,8 @@ from UserProfile.User import profile
 profile['name']='Riaz Khan'
 profile['target_semester']='Fall 2026'
 profile['university']='Rajshahi University of Engineering & Technology'
-profile['BSC']='Mechatronics Engineering'
-profile['graduation_year']
-#previous expereincs
-profile['experiences']
+profile['major']='Mechatronics Engineering'
 
-
-##matched experiencc
 
 
 
@@ -22,38 +17,11 @@ class defaultEmail:
 
 
 
-    def findMachedExp(self):
-        output=[]
-        for item in [self.research_interests]:
-            if item in profile['experiences']:
-                output+=[item]
-        if not output:
-            return ''
-
-        return ', '.join(output)
-    
     def reason(self):
-        print(self.research_interests)
-        x=''
-        if self.findMachedExp():
-            x=self.findMachedExp()
-        
-        if x:
-            return " I have visited your research website and am very enthusiastic about the work being done in + "[x]+". During my undergraduate studies, I conducted research in +"[x]+", which has given me a foundational understanding and strong interest in this area. I would be excited to contribute to your ongoing projects in this field."
-        else:
-            print('No matched topic found')
             return  "I have visited your research website and am very enthusiastic about the work being done in " + self.research_interests + ". During my undergraduate studies, I conducted research related to these areas, which has given me a strong foundation and keen interest in this field. I would be excited to contribute to your ongoing projects across these topics."
         
 
-
-
-
-       
-
-
-    
     def writeEmail(self):
-
 
         email_body = f"""
             <html>
@@ -64,7 +32,7 @@ class defaultEmail:
                 <p>Dear Dr. {self.professor_name},</p>
 
                 <p>Greetings! I am {profile['name']} from Bangladesh, a prospective graduate student for {profile['target_semester']}. 
-                I completed my B.Sc. in {profile['BSC']} in {profile['graduation_year']} from {profile['university']}, one of the leading engineering institutions in my country.</p>
+                I completed my B.Sc. in {profile['major']} in {profile['graduation_year']} from {profile['university']}, one of the leading engineering institutions in my country.</p>
 
                 <p>{self.reasons}</p>
 
@@ -81,7 +49,7 @@ class defaultEmail:
 
                 <p>I have attached my CV for a better understanding of my profile. I will be looking forward to hearing from you regarding any potential opportunities in your lab. </p>
 
-                <p>Looking forward to your response.<br>
+                <p>Looking forward to your response.<br> <br><br>
                 Best regards,<br>
                 <b>{profile['name']}</b></p>
 
