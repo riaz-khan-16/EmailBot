@@ -51,7 +51,12 @@ class defaultEmail:
 
                 <p>Looking forward to your response.<br> <br><br>
                 Best regards,<br>
-                <b>{profile['name']}</b></p>
+                <b>{profile['name']}</b> <br>
+                Email:riaz.khan.ruet@gmail.com
+
+                
+                </p>
+
 
 
             </body>

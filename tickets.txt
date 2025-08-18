@@ -1,7 +1,7 @@
-
-
-Ticket 13: Take user profile first the allow to send email.
-Ticket 12: Learn Thinkter how can we control the flow.
+Tickets 15: Make a method for scheduling date
+Ticket 14: Make a button for reseting inputs [Pendidng]
+Ticket 13: Take user profile first the allow to send email. [Complete]
+Ticket 12: Learn Thinkter how can we control the flow. [Complete]
 Ticket 11: Publish as a product [Complete]
 Ticket 10: Create User Profile. [Complete]
 Ticket 9: Improve the email template. [Complete]
