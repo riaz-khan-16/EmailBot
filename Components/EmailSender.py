@@ -5,6 +5,13 @@ from email.mime.text import MIMEText
 import os
 from dotenv import load_dotenv
 
+#for attaching cv
+from email.mime.base import MIMEBase
+from email import encoders
+
+
+
+
 class EmailSender:
 
     def __init__(self, sender, receiver, subject, body):
@@ -12,17 +19,32 @@ class EmailSender:
         self.receiver=receiver
         self.subject=subject
         self.body=body
+
+    def attachCV(self):
+        filename = "Riaz_Khan_Resume.pdf"           # name of the file
         
 
     def sendEmail(self):
         try:
             # Set up the MIME
             msg = MIMEMultipart()
-            msg['From'] = self.sender
+            msg['From'] = f"Riaz Khan <{self.sender}>"
             msg['To'] = self.receiver
             msg['Subject'] = self.subject
             #add body
             msg.attach(MIMEText(self.body, 'html'))
+
+            # Attach resume
+            filename = "CV__Riaz_Khan.pdf"
+            with open(filename, "rb") as attachment:
+                part = MIMEBase("application", "octet-stream")
+                part.set_payload(attachment.read())
+
+            encoders.encode_base64(part)
+            part.add_header("Content-Disposition", f"attachment; filename={filename}")
+            msg.attach(part)
+
+
 
             # Create server
             server = smtplib.SMTP('smtp.gmail.com', 587)
@@ -32,6 +54,8 @@ class EmailSender:
             load_dotenv()
             app_pass = os.getenv("app_pass")
             server.login(self.sender, app_pass)
+
+
 
 
             # Send email

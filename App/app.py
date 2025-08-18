@@ -74,7 +74,7 @@ class ProfessorForm:
         self.button.config(bg="green", fg="white")
 
         # Show success message
-        self.success_label.config(text="Submission successful!", fg="green")
+        self.success_label.config(text=" Record Stored!", fg="green")
 
     def sendEmail(self):
         # Show success message
@@ -88,7 +88,7 @@ class ProfessorForm:
         email_body=defaultEmail(name, research).writeEmail()
 
 
-        email=EmailSender('riaz222666@gmail.com', professor_email_id, "Prospective Graduate Student", email_body)
+        email=EmailSender('riaz.khan.ruet@gmail.com', professor_email_id, "Prospective Graduate Student", email_body)
         email.sendEmail()
 
 
